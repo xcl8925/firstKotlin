@@ -1,4 +1,4 @@
-package com.example
+package com.example.enum
 
 fun main() {
     println(TestEnum.RED.signal())
@@ -15,11 +15,11 @@ fun main() {
     printValue<TestEnum>("GREEN")
 }
 
-inline fun <reified T : kotlin.Enum<T>> printAllValues() {
+inline fun <reified T : Enum<T>> printAllValues() {
     println(enumValues<T>().joinToString { it.name })
 }
 
-inline fun <reified T : kotlin.Enum<T>> printValue(value: kotlin.String) {
+inline fun <reified T : Enum<T>> printValue(value: String) {
     println(enumValueOf<T>(value))
 }
 

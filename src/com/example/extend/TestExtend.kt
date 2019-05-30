@@ -1,3 +1,5 @@
+package com.example.extend
+
 fun main() {
 
     var student = Student(12, "name", 1)
@@ -24,9 +26,7 @@ interface Listener {
 }
 
 class Student(override var age: Int, name: String) : Person(name) {
-    constructor(age: Int, name: String, sex: Int) : this(age, name) {
-
-    }
+    constructor(age: Int, name: String, sex: Int) : this(age, name)
 }
 
 class Worker : Person(name = "worker name"), Listener {

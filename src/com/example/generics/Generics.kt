@@ -1,4 +1,4 @@
-package com.example
+package com.example.generics
 
 import kotlin.String
 
@@ -9,7 +9,7 @@ fun main() {
     var box = box(111)
     println(box.value)
 
-    var strCo: Out<kotlin.String> = Out("a")
+    var strCo: Out<String> = Out("a")
     var anyCo: Out<Any> = Out<Any>("b")
     anyCo = strCo
     println(anyCo.foo())   // 输出 a
@@ -19,15 +19,17 @@ fun main() {
     in1 = in2
     in2.foo(100)
 
-    val list: ArrayList<*> = arrayListOf(1, "test", Generics(12), Data("12121"))
+    val list: ArrayList<*> = arrayListOf(
+        1, "test",
+        Generics(12),
+        Data("12121")
+    )
     for (item in list) {
         println(item)
     }
 }
 
-data class Data(var name: String) {
-
-}
+data class Data(var name: String)
 
 class Generics<T>(t: T) {
     var value = t

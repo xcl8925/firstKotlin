@@ -1,3 +1,5 @@
+package com.example.clazz
+
 fun main() {
 
     var runoob = Runoob("test")

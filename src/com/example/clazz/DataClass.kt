@@ -1,4 +1,4 @@
-package com.example
+package com.example.clazz
 
 fun main() {
     var dataClass = DataClass("dataclass")
@@ -7,9 +7,9 @@ fun main() {
     var newDataClass = dataClass.copy(name = "newDataclass")
     println(newDataClass)
 
-    val (name) = newDataClass
+    val (name1) = newDataClass
 
-    println(name)
+    println(name1)
 }
 
 data class DataClass(var name: kotlin.String) {

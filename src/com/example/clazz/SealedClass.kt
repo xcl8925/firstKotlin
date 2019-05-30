@@ -1,4 +1,4 @@
-package com.example
+package com.example.clazz
 
 fun main() {
 
@@ -9,7 +9,7 @@ fun main() {
 
 fun test(sealedClass: SealedClass) = when (sealedClass) {
     is Number -> println("is number")
-    is String -> println("is string")
+    is TestString -> println("is string")
     Anything -> println("anything")
 }
 
@@ -17,6 +17,6 @@ sealed class SealedClass
 
 data class Number(val value: kotlin.String) : SealedClass()
 
-data class String(val sealedClass: SealedClass) : SealedClass()
+data class TestString(val sealedClass: SealedClass) : SealedClass()
 
 object Anything : SealedClass()
