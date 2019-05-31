@@ -1,4 +1,4 @@
-package com.example.clazz
+package com.example.kotlin.clazz
 
 fun main() {
     var dataClass = DataClass("dataclass")
@@ -12,6 +12,4 @@ fun main() {
     println(name1)
 }
 
-data class DataClass(var name: kotlin.String) {
-
-}
+data class DataClass(var name: String)

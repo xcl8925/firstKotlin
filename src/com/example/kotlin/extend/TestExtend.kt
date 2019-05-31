@@ -1,4 +1,4 @@
-package com.example.extend
+package com.example.kotlin.extend
 
 fun main() {
 

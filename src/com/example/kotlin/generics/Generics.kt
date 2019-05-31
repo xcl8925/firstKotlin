@@ -1,4 +1,4 @@
-package com.example.generics
+package com.example.kotlin.generics
 
 import kotlin.String
 

@@ -1,4 +1,4 @@
-package com.example.delegated
+package com.example.kotlin.delegated
 
 import kotlin.properties.Delegates
 
@@ -34,6 +34,6 @@ fun main() {
 
     println(varSite.name)
     println(varSite.url)
-    varSite.notNullValue= "not null value"
+    varSite.notNullValue= "not null com.example.kotlin.companion.getValue"
     println(varSite.notNullValue)
 }

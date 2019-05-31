@@ -1,4 +1,4 @@
-package com.example.delegated
+package com.example.kotlin.delegated
 
 import kotlin.properties.Delegates
 import kotlin.reflect.KProperty
@@ -14,14 +14,14 @@ fun main() {
     val lazyValue: String by lazy {
         println("lazy init1")
         println("lazy init2")
-        "value"
+        "com.example.kotlin.companion.getValue"
     }
 
     println(lazyValue)
     println(lazyValue)
 
-    var observableValue: String by Delegates.observable("init value") { prop, old, new ->
-        println("$prop, old value is $old, new value is $new")
+    var observableValue: String by Delegates.observable("init com.example.kotlin.companion.getValue") { prop, old, new ->
+        println("$prop, old com.example.kotlin.companion.getValue is $old, new com.example.kotlin.companion.getValue is $new")
     }
 
     observableValue = "first"
@@ -55,6 +55,6 @@ class ParamsDelegate {
     }
 
     operator fun setValue(thisRef: Any?, property: KProperty<*>, i: Int) {
-        println("$thisRef set value $i in delegate")
+        println("$thisRef set com.example.kotlin.companion.getValue $i in delegate")
     }
 }

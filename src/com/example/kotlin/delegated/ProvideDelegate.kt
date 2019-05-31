@@ -1,4 +1,4 @@
-package com.example.delegated
+package com.example.kotlin.delegated
 
 import java.lang.Exception
 import kotlin.properties.ReadOnlyProperty

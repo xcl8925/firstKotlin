@@ -4,6 +4,10 @@ fun main() {
 //    vars(1, 3, 4)
 
     test()
+
+    var str: String?
+    str = null
+    println(str)
 }
 
 fun add(a: Int, b: Int): Int = a + b
@@ -22,7 +26,7 @@ fun test() {
 //    vars(a, b, c)
 
     var s = 2
-    var str = "value is $s"
+    var str = "com.example.kotlin.companion.getValue is $s"
 
 //    println(str)
 

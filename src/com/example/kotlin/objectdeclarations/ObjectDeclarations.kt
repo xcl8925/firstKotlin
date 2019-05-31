@@ -1,4 +1,4 @@
-package com.example.objectdeclarations
+package com.example.kotlin.objectdeclarations
 
 fun main() {
 
@@ -22,14 +22,15 @@ fun main() {
 
     C().test()
 
-    var site1 = Site()
-    var site2 = Site()
+    var site1 = Site.getInstance
+    var site2 = Site.getInstance
     site1.url = "site1 url"
     site2.url = "site2 url"
 
     println(site1.url)
     println(site2.url)
 
+    println(Site.Desktop.number)
     println(Site.Desktop.number)
     Site.ip
 
@@ -60,9 +61,19 @@ class C {
     }
 }
 
-class Site {
+class Site private constructor() {
+
+    init {
+        println("site init...")
+    }
+
     companion object {
         var ip = "182.1212.1.1"
+        var getInstance = Site()
+    }
+
+    private object SingletonHolder {
+        var holder = Site()
     }
 
     var url = "init url"
@@ -85,7 +96,7 @@ class MyClass {
     }
 
     fun test() {
-         println("test...")
+        println("test...")
     }
 }
 

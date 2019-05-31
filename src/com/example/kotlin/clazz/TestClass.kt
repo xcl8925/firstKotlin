@@ -1,4 +1,4 @@
-package com.example.clazz
+package com.example.kotlin.clazz
 
 fun main() {
 
@@ -11,7 +11,7 @@ fun main() {
     runoob = Runoob("xiechunlei", 30)
     println(runoob.name)
     var age = Grand().Man().getAge()
-    println("get outer age:$age")
+    println("com.example.kotlin.companion.get outer age:$age")
     Grand().Man().innerGetAge()
 
     testChild(object : Child() {
@@ -64,7 +64,7 @@ class Grand : Child() {
         fun getAge() = age
         var parent = this@Grand
         fun innerGetAge() {
-            println("innter get age ${parent.age}")
+            println("innter com.example.kotlin.companion.get age ${parent.age}")
         }
     }
 }

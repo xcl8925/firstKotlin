@@ -1,4 +1,4 @@
-package com.example.enum
+package com.example.kotlin.enum
 
 fun main() {
     println(TestEnum.RED.signal())

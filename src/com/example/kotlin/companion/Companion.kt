@@ -1,3 +1,5 @@
+package com.example.kotlin.companion
+
 fun main() {
 
     MyClass.get()
